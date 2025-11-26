@@ -1,5 +1,5 @@
 
-# 🇱🇰 LankaWork — Sri Lanka Service Marketplace  
+# LankaWork — Sri Lanka Service Marketplace  
 A full-stack platform built to connect **users** and **skilled workers** such as DJs, carpenters, decorators, electricians, mechanics, and many more.  
 The system also includes an **Event Bundle Booking Module** for organizing birthdays, weddings, and parties in one place.
 
