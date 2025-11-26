@@ -61,7 +61,7 @@ Non-paid lightweight AI features:
 
 ## 🏗️ System Architecture
 
-### Backend — **FastAPI**
+### Backend — **Python + FastAPI**
 - REST API  
 - JWT Authentication  
 - Role-based access (User, Worker, Admin)  
@@ -77,7 +77,7 @@ Non-paid lightweight AI features:
 - Event services  
 - Event bookings  
 
-### Frontend — **HTML, CSS, JavaScript**
+### Frontend — **HTML, CSS, JavaScript, Tailwind Css**
 - Responsive UI  
 - Worker filter UI  
 - Dashboard pages  
