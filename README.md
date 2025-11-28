@@ -5,9 +5,9 @@ The system also includes an **Event Bundle Booking Module** for organizing birth
 
 ---
 
-## 🚀 Features
+## Features
 
-### 👤 User Features
+###  User Features
 - Create job posts  
 - Search & filter workers  
 - Book workers for normal jobs  
@@ -15,14 +15,14 @@ The system also includes an **Event Bundle Booking Module** for organizing birth
 - Track job & event status  
 - Rate workers  
 
-### 🛠️ Worker Features
+###  Worker Features
 - Register / login  
 - Create skill profile (ex: DJ, carpenter, painter)  
 - Accept / reject user job requests  
 - Manage availability calendar  
 - Receive event booking requests  
 
-### 🛡️ Admin Features
+###  Admin Features
 - Approve/verify workers  
 - Manage users and workers  
 - Monitor job posts  
@@ -31,7 +31,7 @@ The system also includes an **Event Bundle Booking Module** for organizing birth
 
 ---
 
-## 🎉 Event Bundle Booking Module
+##  Event Bundle Booking Module
 Users can plan parties & events from one place.  
 Supported services:
 
@@ -49,7 +49,7 @@ Each service sends separate requests to workers, who accept or reject the job.
 
 ---
 
-## 🧠 Light AI Module (Free)
+##  Light AI Module (Free)
 Non-paid lightweight AI features:
 - Auto-generate job descriptions  
 - Event suggestions  
@@ -59,7 +59,7 @@ Non-paid lightweight AI features:
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ### Backend — **Python + FastAPI**
 - REST API  
@@ -145,7 +145,7 @@ PUT /admin/worker/{id}/approve
 
 ---
 
-## 🧱 Tech Stack
+##  Tech Stack
 | Layer | Technology |
 |-------|------------|
 | Backend | Python+FastAPI |
@@ -156,7 +156,7 @@ PUT /admin/worker/{id}/approve
 
 ---
 
-## 📦 Installation
+##  Installation
 
 ### **1. Clone Repo**
 ```
@@ -183,7 +183,7 @@ serve with any static server.
 
 ---
 
-## 📌 Roadmap
+##  Roadmap
 - Mobile App (Flutter or React Native)  
 - AI Worker Recommendation System  
 - Online Payments (Stripe / PayHere / Genie)  
@@ -192,12 +192,12 @@ serve with any static server.
 
 ---
 
-## 🏆 Author
+##  Author
 **Randidu Damsith**  
 Full-Stack Developer
 
 ---
 
-## ⭐ License
+##  License
 This project is open-source and free to use.
 
