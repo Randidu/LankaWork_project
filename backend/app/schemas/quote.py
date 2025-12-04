@@ -9,7 +9,7 @@ class QuoteStatus(str, enum.Enum):
     ACCEPTED = "accepted"
 
 class QuoteBase(BaseModel):
-    price: Optional[str] = None
+    price: Optional[float] = None
     note: Optional[str] = None
     status: QuoteStatus = QuoteStatus.PENDING
 

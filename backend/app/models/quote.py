@@ -1,13 +1,15 @@
-from sqlalchemy import Column, Integer, Text, DateTime, Enum, ForeignKey
+from sqlalchemy import Column, Integer, Text, DateTime, Enum, ForeignKey, Float
 from sqlalchemy.orm import relationship
 from datetime import datetime
 from ..database import Base
 import enum
 
+
 class QuoteStatus(str, enum.Enum):
     PENDING = "pending"
     ACCEPTED = "accepted"
     REJECTED = "rejected"
+
 
 class Quote(Base):
     __tablename__ = "quote"
@@ -15,11 +17,11 @@ class Quote(Base):
     id = Column(Integer, primary_key=True, index=True)
     job_id = Column(Integer, ForeignKey("jobs.id", ondelete="CASCADE"), nullable=False)
     worker_id = Column(Integer, ForeignKey("workers.id", ondelete="CASCADE"), nullable=False)
-    price = Column(Integer)
+    price = Column(Float, nullable=False)
     note = Column(Text)
-    status = Column(Enum(QuoteStatus), default=QuoteStatus.PENDING)
+    status = Column(Enum(QuoteStatus, name="quote_status"), default=QuoteStatus.PENDING.value)  # ✅ safer
     created_at = Column(DateTime, default=datetime.utcnow)
 
-
+    # Relationships
     job = relationship("Job", back_populates="quotes")
     worker = relationship("Worker", back_populates="quotes")

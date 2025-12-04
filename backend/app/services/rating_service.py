@@ -23,3 +23,11 @@ def list_ratings_for_worker(db: Session, worker_id: int):
 
 def list_ratings_for_job(db: Session, job_id: int):
     return db.query(Rating).filter(Rating.job_id == job_id).all()
+
+def delete_rating(db: Session, rating_id: int) -> bool:
+    rating = db.query(Rating).filter(Rating.id == rating_id).first()
+    if not rating:
+        return False
+    db.delete(rating)
+    db.commit()
+    return True

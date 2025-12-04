@@ -33,3 +33,11 @@ def update_job(db:Session,job_id:int,updated_data:dict) -> Job | None:
         db.commit()
         db.refresh(job)
     return job
+
+def delete_job(db:Session,job_id:int) -> bool:
+    job = db.query(Job).filter(Job.id == job_id).first()
+    if not job:
+        return False
+    db.delete(job)
+    db.commit()
+    return True

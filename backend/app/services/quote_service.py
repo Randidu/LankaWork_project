@@ -23,3 +23,11 @@ def list_quotes_for_job(db: Session, job_id: int):
 
 def list_quotes_for_worker(db: Session, worker_id: int):
     return db.query(Quote).filter(Quote.worker_id == worker_id).all()
+
+def delete_quote(db: Session, quote_id: int) -> bool:
+    quote = db.query(Quote).filter(Quote.id == quote_id).first()
+    if not quote:
+        return False
+    db.delete(quote)
+    db.commit()
+    return True
