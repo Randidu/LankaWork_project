@@ -13,7 +13,7 @@ class QuoteBase(BaseModel):
     note : Optional[str] = None
     status : QuoteStatus = QuoteStatus.PENDING
 
-class CreateQuote(QuoteBase):
+class QuoteCreate(QuoteBase):
     job_id : int
     worker_id : int
 

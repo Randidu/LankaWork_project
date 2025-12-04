@@ -11,7 +11,7 @@ class RatingCreate(RatingBase):
     user_id : int
     worker_id : int
 
-class UserResponse(RatingBase):
+class RaingResponse(RatingBase):
     id : int
 
     class Config:
