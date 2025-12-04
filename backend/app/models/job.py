@@ -33,3 +33,4 @@ class Job(Base):
     user = relationship("User", back_populates="jobs")
     quotes = relationship("Quote", back_populates="job", cascade="all, delete-orphan")
     ratings = relationship("Rating", back_populates="job", cascade="all, delete-orphan")
+    chats = relationship("Chat", back_populates="job", cascade="all, delete-orphan")

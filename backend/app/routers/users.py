@@ -5,10 +5,10 @@ from app.schemas.user import CreateUser, UserResponse
 from app.services import user_services
 
 
-router =APIRouter(prefix="/users", tags=["users"])
+router=APIRouter(prefix="/users", tags=["users"])
 
 
-@router.post("/", respones_model=UserResponse)
+@router.post("/", response_model=UserResponse)
 def create_user(user : CreateUser,db:Session =Depends(get_db)):
     existing =user_services.get_user_by_email(db,user.email)
     if existing:

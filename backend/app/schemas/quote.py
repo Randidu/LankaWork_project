@@ -1,24 +1,23 @@
 import enum
 from typing import Optional
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
-class QuoteStatus(str , enum.Enum):
+class QuoteStatus(str, enum.Enum):
     PENDING = "pending"
     REJECTED = "rejected"
     ACCEPTED = "accepted"
 
 class QuoteBase(BaseModel):
-    price : Optional[str] = None
-    note : Optional[str] = None
-    status : QuoteStatus = QuoteStatus.PENDING
+    price: Optional[str] = None
+    note: Optional[str] = None
+    status: QuoteStatus = QuoteStatus.PENDING
 
 class QuoteCreate(QuoteBase):
-    job_id : int
-    worker_id : int
+    job_id: int
+    worker_id: int
 
 class QuoteResponse(QuoteBase):
-    id : int
+    id: int
 
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)

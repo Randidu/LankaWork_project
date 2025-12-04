@@ -10,7 +10,7 @@ class QuoteStatus(str, enum.Enum):
     REJECTED = "rejected"
 
 class Quote(Base):
-    __tablename__ = "quotes"
+    __tablename__ = "quote"
 
     id = Column(Integer, primary_key=True, index=True)
     job_id = Column(Integer, ForeignKey("jobs.id", ondelete="CASCADE"), nullable=False)

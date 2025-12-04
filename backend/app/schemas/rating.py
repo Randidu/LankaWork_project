@@ -1,18 +1,17 @@
 from typing import Optional
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
 class RatingBase(BaseModel):
-    stars : int
-    review : Optional[str]= None
+    stars: int
+    review: Optional[str] = None
 
 class RatingCreate(RatingBase):
-    job_id : int
-    user_id : int
-    worker_id : int
+    job_id: int
+    user_id: int
+    worker_id: int
 
-class RaingResponse(RatingBase):
-    id : int
+class RatingResponse(RatingBase): 
+    id: int
 
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)

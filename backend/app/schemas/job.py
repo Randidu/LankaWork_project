@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from typing import Optional
 import enum
 
@@ -27,5 +27,4 @@ class JobResponse(JobBase):
     id: int
     status: JobStatus = JobStatus.POSTED
 
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)

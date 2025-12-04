@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from typing import Optional, List
 
 class WorkerBase(BaseModel):
@@ -16,5 +16,4 @@ class WorkerResponse(WorkerBase):
     id: int
     rating_avg: float = 0.0
 
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)
