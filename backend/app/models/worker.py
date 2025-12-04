@@ -1,4 +1,3 @@
-# app/models/worker.py
 from sqlalchemy import Column, Integer, String, Text, Float, Boolean, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
 from datetime import datetime
@@ -18,7 +17,6 @@ class Worker(Base):
     is_verified = Column(Boolean, default=False)
     created_at = Column(DateTime, default=datetime.utcnow)
 
-    # Relationships
     user = relationship("User", back_populates="worker_profile")
     quotes = relationship("Quote", back_populates="worker", cascade="all, delete-orphan")
     ratings = relationship("Rating", back_populates="worker", cascade="all, delete-orphan")
