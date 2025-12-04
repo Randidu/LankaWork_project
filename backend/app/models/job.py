@@ -1,4 +1,3 @@
-# app/models/job.py
 from sqlalchemy import Column, Integer, String, Text, Float, DateTime, Enum, ForeignKey
 from sqlalchemy.orm import relationship
 from datetime import datetime
