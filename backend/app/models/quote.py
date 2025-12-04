@@ -1,4 +1,3 @@
-# app/models/quote.py
 from sqlalchemy import Column, Integer, Text, DateTime, Enum, ForeignKey
 from sqlalchemy.orm import relationship
 from datetime import datetime
