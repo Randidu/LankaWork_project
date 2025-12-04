@@ -1,4 +1,3 @@
-# app/models/rating.py
 from sqlalchemy import Column, Integer, Text, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
 from datetime import datetime
@@ -15,7 +14,6 @@ class Rating(Base):
     review = Column(Text)
     created_at = Column(DateTime, default=datetime.utcnow)
 
-    # Relationships
     job = relationship("Job", back_populates="ratings")
     user = relationship("User", back_populates="ratings_given")
     worker = relationship("Worker", back_populates="ratings")
