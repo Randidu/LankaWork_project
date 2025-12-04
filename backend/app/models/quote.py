@@ -20,6 +20,6 @@ class Quote(Base):
     status = Column(Enum(QuoteStatus), default=QuoteStatus.PENDING)
     created_at = Column(DateTime, default=datetime.utcnow)
 
-    # Relationships
+
     job = relationship("Job", back_populates="quotes")
     worker = relationship("Worker", back_populates="quotes")
